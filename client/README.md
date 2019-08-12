@@ -29,13 +29,14 @@ A central repo for my final project.
 
 Harbour is a web application where  users can search for unique stays that are exclusively located by bodies of water. (oceans, lakes, rivers)
 
-Users can leave reviews and comments on the different stays. Users can also check-out their 'My Profil' section and add more details (that is not provided in the sign-up form) to their profile so that Hosts may get to know them better.
+Users can leave reviews and comments on the different stays. Users can also check-out their 'My Profil' section and add more details (that is not provided in the sign-up form) to their profile so that Hosts may get to know them better. 
 
 ### Collaborators
 * [Jasmine Carpentier](https://github.com/jascarpentier)
 
 # Design 
 
+<img src="assets/header.png" alt="header">
 <img src={header} alt="Nav bar"/>
 <img src={home-page} alt="Home Page"/>
 <img src={enter-page} alt="Enter Page" />
@@ -44,6 +45,8 @@ Users can leave reviews and comments on the different stays. Users can also chec
 <img src={single-location} alt="Single Location" />
 <img src={footer} alt="footer" />
 
+## ERD 
+<img src={ERD} alt="Erd" />
 
 
 # Development
@@ -61,6 +64,7 @@ Users will be able to leave a review and/or comment on Stays.
 - Implementing the Google Maps API
 - Adding a quiz that will match users to a suggested stay if they don't know where they want to go
 - Implementing Host vs. Stayer status on users so that people can posts stays
+-Users can also heart and save the places that interest them.
 
 ## User Stories 
  * I'm a traveler that is tired of taking the 'tourist' route and want to find a unique place to stay during my travels. 
@@ -93,10 +97,16 @@ Users will be able to leave a review and/or comment on Stays.
 
 ```
 
+### Component Breakdown
+
+Header and Footer will be present on all pages. 
+<br>
+The different forms (since there will be a lot of forms) will be on their respective pages
+
 ### Supporting Libraries
 
 * React
-* Express
+* Ruby
 
 ### Git
 
