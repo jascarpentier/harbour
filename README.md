@@ -36,14 +36,13 @@ Users can leave reviews and comments on the different stays. Users can also chec
 
 # Design 
 
-<img src={header} alt="Nav bar"/>
-<img src={home-page} alt="Home Page"/>
-<img src={enter-page} alt="Enter Page" />
-<img src={my-profile} alt="My Profile Page" />
-<img src={multiple-location} alt="Multiple Locations" />
-<img src={single-location} alt="Single Location" />
-<img src={footer} alt="footer" />
-
+<img src="client/src/assets/header.png" alt="header">
+<img src="client/src/assets/home-page.png" alt="header">
+<img src="client/src/assets/enter-page.png" alt="header">
+<img src="client/src/assets/my-profile.png" alt="header">
+<img src="client/src/assets/multi-location.png" alt="header">
+<img src="client/src/assets/single-location.png" alt="header">
+<img src="client/src/assets/footer.png" alt="header">
 
 
 # Development
@@ -92,6 +91,10 @@ Users will be able to leave a review and/or comment on Stays.
     |___ Footer 
 
 ```
+
+### ERD
+
+<img src="client/src/assets/ERD.png" alt="header">
 
 ### Supporting Libraries
 

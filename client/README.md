@@ -27,6 +27,8 @@ A central repo for my final project.
 
 # Project Overview
 
+Where to find a currated list of unique stays and experiences by bodies of water. And save them to your profile so that you can refer back to them later. 
+
 Harbour is a web application where  users can search for unique stays that are exclusively located by bodies of water. (oceans, lakes, rivers)
 
 Users can leave reviews and comments on the different stays. Users can also check-out their 'My Profil' section and add more details (that is not provided in the sign-up form) to their profile so that Hosts may get to know them better. 
@@ -36,7 +38,7 @@ Users can leave reviews and comments on the different stays. Users can also chec
 
 # Design 
 
-<img src="assets/header.png" alt="header">
+<img src="src/assets/header.png" alt="header">
 <img src={header} alt="Nav bar"/>
 <img src={home-page} alt="Home Page"/>
 <img src={enter-page} alt="Enter Page" />
@@ -99,9 +101,11 @@ Users will be able to leave a review and/or comment on Stays.
 
 ### Component Breakdown
 
-Header and Footer will be present on all pages. 
-<br>
-The different forms (since there will be a lot of forms) will be on their respective pages
+- Header and Footer will be present on all pages. 
+
+- The different forms (since there will be a lot of forms) will be on their respective pages.
+
+- First off the users will land on an entry page asking them to either sign-in or log-in
 
 ### Supporting Libraries
 
