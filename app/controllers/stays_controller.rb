@@ -7,6 +7,6 @@ class StaysController < ApplicationController
 
   def show 
     @stay = Stay.find(params[:id])
-    render json: @stay
+    render json: @stay, include: :reviews
   end
 end

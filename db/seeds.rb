@@ -24,3 +24,7 @@ Stay.create!(name:"Milhouse", location: "Buenos Aires", description: "This amazi
 Stay.create!(name:"Fabrika", location: "Tbilisi", description: "Outside the courtyard, you’ll find an array of bars and restaurants. The dorms are very spacious with soft beds and your own light and electric outlet. This multi-use space is also extremely popular with locals and is one of the hip places to be in the city.")
 Stay.create!(name:"HK Austin", location: "Austin", description: "From the new mattresses to the spacious dorms to the comfy common room couches to the BBQs they throw, this place really knows how to make you feel at home.")
 Stay.create!(name:"The B.I.G Backpackers", location: "Cape Town", description: "For sure solo travellers of every kind will love the friendly ambience and home-from-home social spaces.")
+
+User.create(username: "brian", password: "12345678", name: "Brian Flynn", email: "brianf@generalassemb.ly")
+Review.create(comment: "It's the best", user_id: 1, stay_id:1)
+

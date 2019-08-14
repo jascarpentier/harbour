@@ -2,66 +2,70 @@
   text-align: center;
 }
 
-/******************** FOOTER ********************/
+/******************** Nav ********************/
 
-.footer {
-  color: #666666;
-  padding: 10px 50px;
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.footer p, .footer a {
-  font-size: 1.1em;
-}
-
-.footer-column {
-  width: 30%;
-  margin: 0;
+.nav {
+  display: inline;
+  margin: 0 15px;
   padding: 10px;
 }
 
-#footer-hours {
-  margin-top: 60px;
+.header {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  padding: 0;
 }
 
-#footer-hours p {
-  margin-top: 3px;
-  margin-bottom: 0;
+.NavLinks {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+  overflow: hidden;
+  float:left;
+  justify-content: space-between;
+  margin: 15px;
+  text-transform: uppercase;
 }
 
-#footer-address {
-  text-align: center;
-}
-
-#footer-address img {
-  max-width: 100px;
-  opacity: 0.85;
-}
-
-#footer-socials {
+header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
+  align-items: center;
+   width: 100%;
+  min-height: 60px;
+  position: absolute; 
+  margin-bottom: 30px;
+ width: 100%;
+  min-height: 55px;
+  padding: 0 5rem;
+  top: 0;    
 }
 
-#footer-socials img {
-  max-width: 60px;
-  padding: 10px
+header nav a:hover,
+a:focus {
+  color:#696969;
 }
 
-#footer-contact-link div {
-  margin-top: 3px;
+a.NavLinks {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
 }
 
-#footer-contact-link img {
-  margin-right: 15px;
+
+
+/******************** AUTH FORMS ********************/
+
+.auth-container {
+  margin-top: 50px;
+  flex-direction: row;
 }
 
-
-
-
-
+h2 {
+  color:red;
+}
 
 /******************** FOOTER ********************/
 
@@ -97,13 +101,10 @@
 }
 
 
-
 #footer-connect {
   display: flex;
   justify-content: space-around;
 }
-
-
 
 #footer-connnect-link div {
   margin-top: 3px;

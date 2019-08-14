@@ -21,32 +21,37 @@ export const registerUser = async (registerData) => {
   return resp.data
 }
 
-export const fetchComments = async (id) => {
-  const resp = await api.get(`/comments/${id}`);
+export const fetchReviews = async (id) => {
+  const resp = await api.get(`/stays/${id}/reviews`);
   return resp.data;
 }
 
-export const createComment = async (data) => {
+export const createReview = async (stayid, data) => {
   getToken();
-  const { id, ...newComment } = data;
-  const resp = await api.post(`/stays/${id}/comments`, newComment)
+  const resp = await api.post(`/stays/${stayid}/reviews`, { ...data, stay_id: stayid })
   return resp.data;
 }
 
-export const updateComment = async (data) => {
+export const updateReview = async (data) => {
   getToken();
-  const { id, ...commentData } = data;
-  await api.put(`/comments/${id}`, commentData)
+  const { id, ...reviewData } = data;
+  await api.put(`/reviews/${id}`, reviewData)
 }
 
-export const deleteComment = async (id) => {
+export const deleteReview = async (id) => {
   getToken();
-  const resp = await api.delete(`/comments/${id}`);
+  const resp = await api.delete(`/reviews/${id}`);
   return resp.data;
 }
 
-export const stayInfo = async (id) => {
+export const stayInfo = async () => {
+  const resp = await api.get(`/stays`);
+  return resp.data;
+}
+
+export const stayDetails = async (id) => {
   const resp = await api.get(`/stays/${id}`);
+  console.log(resp.data)
   return resp.data;
 }
 

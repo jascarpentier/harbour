@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 
 /* login form and link to register form */
 
@@ -15,10 +13,10 @@ const Login = (props) => {
         props.handleLogin();
       }} >
         <p>Username:</p>
-        <input name="username" type="text" onChange={props.handleChange} />
+        <input name="username" type="text" onChange={props.authHandleChange} value={props.authFormData.username} />
         <p>Password:</p>
-        <input name="password" type="password" onChange={props.handleChange} />
-        <button>Login</button>
+        <input name="password" type="password" onChange={props.authHandleChange} value={props.authFormData.password} />
+        <button >Login</button>
       </form>
     </div>
   );

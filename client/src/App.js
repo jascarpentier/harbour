@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+// import { withRouter } from 'react-router';
 import decode from 'jwt-decode';
 import './App.css';
 import {
@@ -9,10 +9,10 @@ import {
 } from './services/api-helper'
 
 import Footer from './components/Footer';
-import LoginForm from './components/LoginForm';
-import EnterPage from './components/EnterPage';
-import SignUpForm from './components/SignUpForm';
-import SinglePageView from './components/SinglePageView';
+import Home from './components/Home';
+import SingleStay from './components/SingleStay';
+import AllStays from './components/AllStays';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -26,11 +26,6 @@ export default class App extends React.Component {
       }
     }
   }
-
-
-
-
-
 
 
 
@@ -73,14 +68,42 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="app" id="home">
+      <div className="App" >
+        <header>
+          <nav>
+            <Link className='NavLinks' to='/'>Home</Link>
+            <Link className='NavLinks' to='stays'>All Stays</Link>
+          </nav>
 
-        <EnterPage id="enter" />
-        <LoginForm id="login" handleLogin={this.handleLogin} />
-        <SignUpForm id="signup" handleRegister={this.handleRegister} handleChange={this.authHandleChange} />
-        <SinglePageView id="view_stay" />
-        <Footer id="footer" />
-      </div>
+        </header>
+        <main>
+
+
+          <Route
+            exact path='/stays'
+            render={() => <AllStays
+            />}
+          />
+          <Route
+            exact path='/stays/:id'
+            render={(props) => <SingleStay id={props.match.params.id}
+            />}
+          />
+          <Route
+            exact path='/'
+            render={() => <Home
+              handleRegister={this.handleRegister}
+              handleLogin={this.handleLogin}
+              currentUser={this.state.currentUser}
+              authFormData={this.state.authFormData}
+              authHandleChange={this.authHandleChange}
+            />}
+          />
+          <div>
+            <Footer id="footer" />
+          </div>
+        </main>
+      </div >
 
     );
   }
