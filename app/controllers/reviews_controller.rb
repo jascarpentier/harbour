@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authorize_request, only: :create
+
 
   def index 
     @stay = Stay.find(params[:stay_id])
@@ -13,15 +15,19 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    @stay = Stay.find(params[:stay_id])
     @review = Review.new(review_params)
+    @review.user = @current_user
+    @review.stay = @stay
     if @review.save
-      render json: @review, status: :created, location: @review
+      render json: @review, status: :created
     else
       render json: @review.errors, status: :unprocessable_entity
     end
   end
 
   def update
+    @review = Review.find(params[:id])
     if @review.update(review_params)
       render json: @review
     else
@@ -31,6 +37,7 @@ class ReviewsController < ApplicationController
 
 
   def destroy
+    @review = Review.find(params[:id])
     @review.destroy
   end
 

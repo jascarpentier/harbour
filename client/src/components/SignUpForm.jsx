@@ -2,7 +2,6 @@ import React from 'react';
 
 // This component handles sign-up form
 const SignUpForm = (props) => {
-  console.log(props)
   return (
     <div className="auth-container">
       <h2>Sign Up</h2>

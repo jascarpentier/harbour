@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReviewList from './ReviewList';
 import { ReviewsForm } from './ReviewsForm';
+// import tulumHostel from '../assets/tulumHostel';
 import {
   createReview,
   deleteReview,
@@ -38,14 +39,13 @@ class SingleStay extends React.Component {
     const stayid = this.props.id;
     const stay = await stayDetails(stayid);
     const reviews = await fetchReviews(parseInt(stayid));
-
     this.setState({
       stayData: {
         id: stay.id,
         name: stay.name,
         location: stay.location,
         description: stay.description,
-        url_to_image: ""
+        url_to_image: stay.url_to_image
       },
       reviews: reviews
     })
@@ -70,9 +70,8 @@ class SingleStay extends React.Component {
 
   handleReviewFormSubmit = async (ev) => {
     ev.preventDefault();
-    const data = { stayId: this.state.stayData.id, ...this.state.reviewFormData };
-    console.log(data);
-    const newReview = await createReview(data);
+    const data = { stayid: this.state.stayData.id, ...this.state.reviewFormData };
+    const newReview = await createReview(this.state.stayData.id, data);
     this.setState(prevState => ({
       reviewUpdateFormData: {
         comment: '',
@@ -108,15 +107,14 @@ class SingleStay extends React.Component {
 
   handleReviewUpdateSubmit = async (ev) => {
     ev.preventDefault();
-    const data = { ...this.state.reviewUpdateFormData, id: this.state.updatingreviewId };
-    const resp = await updateReview(data);
-    console.log(resp);
-    this.setState({
+    const resp = await updateReview(this.state.reviewUpdateFormData, this.state.updatingreviewId);
+    this.setState(prevState => ({
+      reviews: prevState.reviews.map(review => review.id === resp.id ? resp : review),
       reviewUpdateFormData: {
         comment: "",
       },
       updatingreviewId: ''
-    })
+    }))
   }
 
   handleReviewCancel = () => {
@@ -130,9 +128,12 @@ class SingleStay extends React.Component {
     return (
       <>
         <div className='singleStay'>
+          <img className="hostelimage" src={this.state.stayData.url_to_image}></img>
         </div>
         <div className="singleStayInfo">
+
           <h2 className='stayh2'>{this.state.stayData.name}</h2>
+
           <p className='stayLocation'>Location:</p> <p className='stayResponse'>{this.state.stayData.location}</p>
           <p className='stayDescription'>Description:</p> <p className='stayResponse'>{this.state.stayData.description}</p>
 
@@ -160,9 +161,7 @@ class SingleStay extends React.Component {
           reviewUpdateFormData={this.state.reviewUpdateFormData}
 
         />
-
       </>
-
     )
   }
 }

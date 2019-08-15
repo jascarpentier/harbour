@@ -28,7 +28,6 @@ export default class App extends React.Component {
   }
 
 
-
   /* AUTH */
 
   handleLoginButton = () => {
@@ -78,7 +77,6 @@ export default class App extends React.Component {
         </header>
         <main>
 
-
           <Route
             exact path='/stays'
             render={() => <AllStays
@@ -97,6 +95,7 @@ export default class App extends React.Component {
               currentUser={this.state.currentUser}
               authFormData={this.state.authFormData}
               authHandleChange={this.authHandleChange}
+              handleLogout={this.handleLogout}
             />}
           />
           <div>

@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+main {
+
+}
+
 /******************** Nav ********************/
 
 .nav {
@@ -45,7 +49,9 @@ header nav {
 
 header nav a:hover,
 a:focus {
-  color:#696969;
+  color:#242323;
+  border-bottom: 2px solid #242323;
+  padding-bottom: 5px;
 }
 
 a.NavLinks {
@@ -54,17 +60,50 @@ a.NavLinks {
   color: black;
 }
 
+h3 {
+margin-top: 50px;
+color: black;
+font-size: 50px;
+}
+
 
 
 /******************** AUTH FORMS ********************/
 
 .auth-container {
-  margin-top: 50px;
+  margin-top: 80px;
   flex-direction: row;
 }
 
 h2 {
   color:red;
+}
+
+/******************** All Stays ********************/
+
+.allStays { 
+  /* display: inline-grid;
+grid-template-columns: 220px 220px 220px;
+grid-template-rows: 250px 250px 250px; */
+}
+
+.staysHeader {
+  color: pink;
+}
+
+/******************** Single Stay ********************/
+.hostelimage {
+  padding-top: 60px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  z-index: -1;
+}
+
+.stayh2 {
+  color: black;
+  font-size: 50px;
+  margin: 20px 20px;
 }
 
 /******************** FOOTER ********************/
@@ -79,6 +118,7 @@ h2 {
 
 .footer p, .footer a {
   font-size: 1.1em;
+  text-decoration: none;
 }
 
 .footer-column {

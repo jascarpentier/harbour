@@ -14,7 +14,7 @@ class ApplicationController < ActionController::API
 
   def authorize_request
     header = request.headers['authorization']
-    header = header.split(' ').last if headerbegin
+    header = header.split(' ').last if header
     @decoded = decode(header)
     @current_user = User.find(@decoded[:user_id])
   rescue ActiveRecord::RecordNotFound => e

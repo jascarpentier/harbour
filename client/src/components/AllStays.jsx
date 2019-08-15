@@ -20,11 +20,10 @@ class AllStays extends React.Component {
   render() {
     return (
       <div className='allStays'>
-        <h1>stays</h1>
+        <h1 className="staysHeader">Hostels</h1>
         {this.state.stays.map(stay => (
           <div key={stay.id} >
             <p>{stay.name}</p>
-            <p>{stay.location}</p>
 
             <Link
               to={`/stays/${stay.id}`}> Details </Link>
