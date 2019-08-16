@@ -214,14 +214,48 @@ button:hover {
 
 /******************** All Stays ********************/
 
-.moreDetails {
-  background-color: red;
-  color: white;
-  padding: 1em 1.5em;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
+.stayimg {
+  width: 500px;
 }
+
+.staything {
+  background-color: whitesmoke;
+  padding: 30px 30px 30px 30px;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+}
+
+.muliName {
+  font-size: 40px;
+}
+
+.moreDetails {
+  padding: 20px 30px;
+	font-size: 40px;
+	cursor: pointer;
+	position: relative;
+	border: 2px solid white;
+	outline: none;
+	color: white;
+	background-color: transparent;
+	margin: 40px;
+	font-family: 'Merriweather', serif;
+	white-space: nowrap;
+}
+
+  .moreDetails:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: 0.5s ease;
+  }
+  .moreDetails:before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: 0.5s ease;
+  }
 
 .moreDetails:hover {
   background-color: #ce0606;
@@ -230,31 +264,8 @@ button:hover {
 .moreDetails:active {
   box-shadow: none;
   top: 5px;
-}
+} 
 
-.staysHeader {
-  color: pink;
-}
-
-.staything {
-  display: grid;
-  grid-template-columns: 30% auto 30%;
-  grid-column-gap: 10px;
-  grid-row-gap: 15px;
-  justify-items: center;
-  padding: 50px;
-  margin: 50px;  
-}
-
-.blogimg {
-  width: 330px; 
-  height: 330px;
-  object-fit: fill;
-}
-
-h1 {
-  text-align: center;
-}
 
 
 
