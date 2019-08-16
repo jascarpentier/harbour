@@ -13,7 +13,7 @@ export default function Footer() {
         <div id="footer-socials">
           <a href="https://www.instagram.com/"><img className='socialLogo' src="https://i.imgur.com/90TFgg0.png" alt="logo" /></a>
           <a href="https://www.facebook.com/"><img className='socialLogo' src="https://i.imgur.com/20twqzY.png" alt="logo" /></a>
-          <a href="https://www.twitter.com/"><img className='socialLogo' src="https://i.imgur.com/Equc306.jpg" alt="logo" /></a>
+          <a href="https://www.twitter.com/"><img className='socialLogo' src="https://i.imgur.com/sYICwRZ.png" alt="logo" /></a>
         </div>
 
       </div>

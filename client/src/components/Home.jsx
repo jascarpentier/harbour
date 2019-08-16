@@ -59,7 +59,7 @@ class Home extends React.Component {
         <div className="home-hero">
           <h3>The Best Hostels of 2019</h3>
           <p>Check-out our list of the top Hostels across the world and let us know your experience by leaving a comment.</p>
-          <img className='headerimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
+
           <div>
             {(this.state.active === 'FIRST') && <LoginForm currentUser={this.props.currentUser}
               authFormData={this.props.authFormData}

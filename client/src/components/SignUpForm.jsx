@@ -4,18 +4,27 @@ import React from 'react';
 const SignUpForm = (props) => {
   return (
     <div className="auth-container">
-      <h2>Sign Up</h2>
 
       <form onSubmit={props.handleRegister} >
-        <p>Username:</p>
-        <input name="username" type="text" onChange={props.authHandleChange} />
-        <p>Email:</p>
-        <input name="email" type="text" onChange={props.authHandleChange} />
-        <p>Password:</p>
-        <input name="password" type="password" onChange={props.authHandleChange} />
+        <div class="con">
+          <header class="head-form">
+            <h2>Register</h2>
+            <p>Register your account to leave a comment</p>
+          </header>
+          <input placeholder="@UserName" class="form-input" name="username" id="txt-input" type="text" onChange={props.authHandleChange} />
+          <input placeholder="Email" class="form-input" name="email" id="txt-input" type="text" onChange={props.authHandleChange} />
+          <input placeholder="Password" class="form-input" name="password" id="txt-input" type="password" onChange={props.authHandleChange} />
 
-        <button>Register</button>
+          <button>Register</button>
+          <div class="other">
+            <button class="btn submits frgt-pass">Forgot Password</button>
+            <button class="btn submits sign-up">Sign Up
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
       </form>
+
     </div>
   );
 }

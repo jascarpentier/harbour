@@ -31,8 +31,9 @@ class AllStays extends React.Component {
         {this.state.stays.map(stay => (
           <div className='staything' key={stay.id} >
 
+
+            <img className='stayimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
             <h1>{stay.name}</h1>
-            <img className='blogimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
             <Link className='moreDetails'
               to={`/stays/${stay.id}`}> Details </Link>
 

@@ -22,9 +22,10 @@ class Header extends React.Component {
             <li><Link to="/">home</Link></li>
             <li><Link to="/all-stays">All Stays</Link></li>
             <li><Link to="/my-profile">My Profile</Link></li>
+
           </ul>
         </div>
-      </div>
+      </div >
     )
   }
 }
