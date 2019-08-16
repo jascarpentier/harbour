@@ -6,7 +6,7 @@ export default function ReviewList(props) {
       {props.reviews.map(review =>
         <div className="review" key={review.id}>
           {}
-          <h3> {review.comment} </h3>
+          <h4> {review.comment} </h4>
           {props.editingId === '' &&
             <button className='deleteReview' onClick={() => props.handleDelete(review.id)}> Delete </button>}
           {props.editingId === '' &&

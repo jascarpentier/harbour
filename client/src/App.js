@@ -72,6 +72,7 @@ export default class App extends React.Component {
           <nav>
             <Link className='NavLinks' to='/'>Home</Link>
             <Link className='NavLinks' to='stays'>All Stays</Link>
+
           </nav>
 
         </header>
