@@ -33,11 +33,15 @@ class AllStays extends React.Component {
         <h1 className="staysHeader">Hostels</h1>
         {this.state.stays.map(stay => (
           <div className='staything' key={stay.id} >
-            <img className='stayimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
-            <h1 className='muliName'>{stay.name}</h1>
-            <p>{stay.description}</p>
-            <Link class="moreDetails"
-              to={`/stays/${stay.id}`}> Details </Link>
+            <div className='stayimgthing'>
+              <img className='stayimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
+            </div>
+            <div className='stayinfothing'>
+              <h1 className='multiName'>{stay.name}</h1>
+              <p>{stay.description}</p>
+              <Link class="moreDetails"
+                to={`/stays/${stay.id}`}> Details </Link>
+            </div>
 
           </div>
         ))}

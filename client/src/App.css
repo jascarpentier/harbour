@@ -6,16 +6,11 @@ background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
 background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 background-attachment: fixed;
 background-repeat: no-repeat;
-
-  font-family: 'Vibur', cursive;
-/*   the main font */
-  font-family: 'Abel', sans-serif;
+font-family: 'Vibur', cursive;
+font-family: 'Abel', sans-serif;
 opacity: .95;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 /******************** Nav ********************/
 
 .nav {
@@ -104,18 +99,16 @@ form .con {
     margin: 0 auto;
 }
 
-/* header {
-  margin: 2% auto 10% auto;
-  text-align: center;
-} */
-/* Login title form form */
+/* Login title form  */
 header h2 {
   font-size: 250%;
   font-family: 'Playfair Display', serif;
   color: #3e403f;
 }
-/*  A welcome message or an explanation of the login form */
-header p {letter-spacing: 0.05em;}
+
+header p {
+  letter-spacing: 0.05em;
+}
 
 .input-item {
   background: #fff;
@@ -124,34 +117,31 @@ header p {letter-spacing: 0.05em;}
   border-radius: 5px 0px 0px 5px;
 }
 
-
-/* inputs form  */
+/* inputs auth form  */
 input[class="form-input"]{
   width: 200px;
   height: 30px;
-
   margin-top: 2%;
   padding: 15px;
-  
   font-size: 16px;
   font-family: 'Abel', sans-serif;
   color: #5E6472;
-
   outline: none;
   border: none;
-
   border-radius: 0px 5px 5px 0px;
-  transition: 0.2s linear;
-  
+  transition: 0.2s linear; 
 }
-input[id="txt-input"] {width: 250px;}
-/* focus  */
+
+input[id="txt-input"] {
+  width: 250px;
+}
+
 input:focus {
   transform: translateX(-2px);
   border-radius: 5px;
 }
 
-/* input[type="text"] {min-width: 250px;} */
+/* input[type="text"]*/
 /* buttons  */
 button {
   display: inline-block;
@@ -174,7 +164,8 @@ button {
   margin: 2% auto;
   letter-spacing: 0.05em;
 }
-/* Submits */
+
+/* Submit */
 .submits {
   width: 48%;
   display: inline-block;
@@ -182,10 +173,14 @@ button {
 }
 
 /*       Forgot Password button  */
-.frgt-pass {background: transparent;}
+.frgt-pass {
+  background: transparent;
+}
 
 /*     Sign Up button  */
-.sign-up {background: #B8F2E6;}
+.sign-up {
+  background: #B8F2E6;
+}
 
 
 /* buttons hover */
@@ -208,25 +203,35 @@ button:hover {
 }
 
 
-.headerimg {
- z-index: -1;
-}
-
 /******************** All Stays ********************/
 
 .stayimg {
   width: 500px;
 }
 
+.stayimgthing {
+  width: 500px;
+}
+
+.stayinfothing {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 50px 50px;
+
+}
+
 .staything {
   background-color: whitesmoke;
   padding: 30px 30px 30px 30px;
   margin: 50px;
-  display: grid;
-  grid-template-columns: 30% auto 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.muliName {
+.multiName {
   font-size: 40px;
 }
 
@@ -235,36 +240,22 @@ button:hover {
 	font-size: 40px;
 	cursor: pointer;
 	position: relative;
-	border: 2px solid white;
+	border: 2px solid black;
 	outline: none;
-	color: white;
+	color: black;
 	background-color: transparent;
 	margin: 40px;
 	font-family: 'Merriweather', serif;
 	white-space: nowrap;
 }
 
-  .moreDetails:after {
-    content: "";
-    position: absolute;
-    background-color: white;
-    transition: 0.5s ease;
-  }
-  .moreDetails:before {
-    content: "";
-    position: absolute;
-    background-color: white;
-    transition: 0.5s ease;
-  }
+
 
 .moreDetails:hover {
-  background-color: #ce0606;
+  background-color: blue;
 }
 
-.moreDetails:active {
-  box-shadow: none;
-  top: 5px;
-} 
+
 
 
 
@@ -285,7 +276,7 @@ button:hover {
 }
 
 .leaveReviewButton {
-color: pink;
+/* color: pink; */
 }
 
 

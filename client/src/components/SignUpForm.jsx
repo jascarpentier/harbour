@@ -21,6 +21,7 @@ const SignUpForm = (props) => {
             <button class="btn submits sign-up">Sign Up
       <i class="fa fa-user-plus" aria-hidden="true"></i>
             </button>
+
           </div>
         </div>
       </form>
