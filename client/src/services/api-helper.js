@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const baseUrl = 'http://localhost:3000'
+// https://glacial-waters-49646.herokuapp.com/
 
 const api = axios.create({
   baseURL: baseUrl

@@ -76,7 +76,9 @@ class Home extends React.Component {
             </button> : <button type="button" onClick={this.handleClick} className="toggle-button">
                 Login
             </button>}
-
+            {loggedIn &&
+              <div className="display-username">Hi, {this.props.currentUser} ❤ </div>
+            }
             {loggedIn &&
               <button className="btn3" id="logout" onClick={this.props.handleLogout}> Log Out</button>
             }

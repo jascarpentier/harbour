@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-// import { withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 import decode from 'jwt-decode';
 import './App.css';
 import {
@@ -14,7 +14,7 @@ import SingleStay from './components/SingleStay';
 import AllStays from './components/AllStays';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,6 +40,7 @@ export default class App extends React.Component {
       currentUser: decode(userData.token)
     })
     localStorage.setItem("jwt", userData.token)
+    this.props.history.push('/stays');
   }
 
   handleRegister = async (e) => {
@@ -108,3 +109,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default withRouter(App);

@@ -29,23 +29,28 @@ class AllStays extends React.Component {
   render() {
     return (
 
-      <div className='allStays'>
-        <h1 className="staysHeader">Hostels</h1>
-        {this.state.stays.map(stay => (
-          <div className='staything' key={stay.id} >
-            <div className='stayimgthing'>
-              <img className='stayimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
-            </div>
-            <div className='stayinfothing'>
-              <h1 className='multiName'>{stay.name}</h1>
-              <p>{stay.description}</p>
-              <Link class="moreDetails"
-                to={`/stays/${stay.id}`}> Details </Link>
-            </div>
 
-          </div>
-        ))}
-      </div>
+      <div className='container'>
+
+        <h1 className="staysHeader">Hostels</h1>
+
+        {
+          this.state.stays.map(stay => (
+            <div className='staything' key={stay.id} >
+              <div className='stayimgthing'>
+                <img className='stayimg' src="https://i.imgur.com/8eRdeIk.jpg" alt="yallow" />
+              </div>
+              <div className='stayinfothing'>
+                <h1 className='multiName'>{stay.name}</h1>
+                <p className='staydescriptionthing'>{stay.description}</p>
+                <Link class="moreDetails"
+                  to={`/stays/${stay.id}`}> Details </Link>
+              </div>
+
+            </div>
+          ))
+        }
+      </div >
     )
   }
 }

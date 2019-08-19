@@ -205,30 +205,50 @@ button:hover {
 
 /******************** All Stays ********************/
 
+.staysHeader {
+	width:100%;
+	height:100%;
+	margin: 2rem 0;
+	padding:0;
+	display:flex;
+	font-size:90px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+  justify-content:center;
+  z-index: 2;
+  letter-spacing: 6px;
+  color: transparent;
+  text-shadow:8px 0px 0 #aad7e7, 13px 3px 0 black;
+
+}
+
+
 .stayimg {
   width: 500px;
 }
 
-.stayimgthing {
-  width: 500px;
-}
 
 .stayinfothing {
   display: flex;
   flex-direction: column;
   width: 500px;
-  margin: 50px 50px;
+  /* margin: 50px 50px; */
 
 }
 
 .staything {
   background-color: whitesmoke;
-  padding: 30px 30px 30px 30px;
+  padding: 40px 80px 40px 80px;
   margin: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  /* align-items: baseline; */
+}
+
+.staydescriptionthing {
+  padding: 40px;
 }
 
 .multiName {
@@ -236,23 +256,27 @@ button:hover {
 }
 
 .moreDetails {
-  padding: 20px 30px;
-	font-size: 40px;
+  padding: 10px 20px;
+	font-size: 30px;
 	cursor: pointer;
 	position: relative;
-	border: 2px solid black;
+	border: 2px solid white;
 	outline: none;
 	color: black;
-	background-color: transparent;
 	margin: 40px;
-	font-family: 'Merriweather', serif;
-	white-space: nowrap;
+  white-space: nowrap;
+  padding: 15px;
+  background-color: white;
+  font-family: 'Brown Bold', sans-serif;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-
-
 .moreDetails:hover {
-  background-color: blue;
+background-color: #8ae5e1 ;
 }
 
 
@@ -281,7 +305,11 @@ button:hover {
 
 
 /******************** FOOTER ********************/
-
+ 
+.footer a {
+  text-decoration: none;
+  color: #666666;
+}
 
 .footer {
   color: #666666;
