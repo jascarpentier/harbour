@@ -43,7 +43,7 @@ class AllStays extends React.Component {
               <div className='stayinfothing'>
                 <h1 className='multiName'>{stay.name}</h1>
                 <p className='staydescriptionthing'>{stay.description}</p>
-                <Link class="moreDetails"
+                <Link className="moreDetails"
                   to={`/stays/${stay.id}`}> Details </Link>
               </div>
 

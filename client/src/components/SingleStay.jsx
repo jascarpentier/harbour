@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReviewList from './ReviewList';
 import { ReviewsForm } from './ReviewsForm';
-// import tulumHostel from '../assets/tulumHostel';
+
 import {
   createReview,
   deleteReview,
@@ -128,7 +128,7 @@ class SingleStay extends React.Component {
     return (
       <>
         <div className='singleStay'>
-          <img className="hostelimage" src={this.state.stayData.url_to_image}></img>
+          <img className="hostelimage" src={this.state.stayData.url_to_image} alt=""></img>
         </div>
         <div className="singleStayInfo">
 
@@ -146,7 +146,8 @@ class SingleStay extends React.Component {
         {this.state.reviewing &&
           <ReviewsForm
             handleChange={this.handleReviewFormChange}
-            handleSubmit={this.handleReviewFormSubmit} />
+            handleSubmit={this.handleReviewFormSubmit}
+            reviewFormData={this.state.reviewFormData} />
         }
 
         <ReviewList

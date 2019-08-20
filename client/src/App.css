@@ -299,10 +299,112 @@ background-color: #8ae5e1 ;
   margin: 20px 20px;
 }
 
-.leaveReviewButton {
-/* color: pink; */
+.commentForm {
+  width: 450px; 
+  min-height: 200px;
+  height: auto;
+  border-radius: 55px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%; 
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
 }
 
+
+input[class="comment"]{
+  width: 400px;
+  height: 55px;
+  margin-top: 2%;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+  color: #5E6472;
+  outline: none;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.2s linear; 
+}
+
+.reviewh1 {
+  color: black;
+}
+
+.inputSubmitReview {
+  display: inline-block;
+  color: #252537;
+  width: 280px;
+  height: 50px;
+  padding: 0 10px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  margin: 2% auto;
+  letter-spacing: 0.05em;
+}
+
+.deleteReview {
+  display: inline-block;
+  color: #252537;
+  width:180px;
+  height: 50px;
+  padding: 0 50px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  margin: 10px;
+  letter-spacing: 0.05em;
+}
+
+.updateReview {
+  display: inline-block;
+  color: #252537;
+  width:180px;
+  height: 50px;
+  padding: 0 50px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  margin: 10px;
+  letter-spacing: 0.05em;
+
+}
+
+.formthingy {
+  width: 450px; 
+  min-height: 200px;
+  height: auto;
+  border-radius: 55px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%; 
+  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
+
+input[class="formthings"]{
+  width: 400px;
+  height: 55px;
+  margin-top: 2%;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+  color: #5E6472;
+  outline: none;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.2s linear; 
+}
 
 /******************** FOOTER ********************/
  
@@ -347,6 +449,152 @@ background-color: #8ae5e1 ;
   width: 35px;
   height: 35px;
 }
+
+/******************** Media Queries  ********************/
+
+@media only screen
+and (max-width: 900px) {
+
+  form {
+  width: 350px;
+  border-radius: 4px;
+  margin: 1% auto;
+  }
+  h3 {
+    margin-top: 60px;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 15px;
+    }
+
+    .footer {
+      padding: 5px 10px;
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .nav {
+      display: inline;
+      margin: 0 6px;
+      padding: 1px;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      width: 50%;
+      min-height: 60px;
+      position: absolute; 
+      margin-bottom: 10px;
+     width: 100%;
+      min-height: 55px;
+      padding: 0 0.5rem;
+        
+    }
+
+    .stayimg img {
+      width: 200px;
+    }
+
+    .footer p, .footer a {
+      font-size: 1em;
+    }
+
+    #footer-socials img {
+      max-width: 40px;
+      padding: 10px
+    }
+
+    .footer-column {
+     display: none;
+    }
+
+    p {
+      padding: 5px;
+    }
+
+    .staysHeader {
+      width:100%;
+      height:100%;
+      margin: 1rem 0;
+      padding-top: 30px;
+      display:flex;
+      font-size:50px;  
+    }
+
+    .stayimg { 
+      width: 300px;
+    }
+
+    .staything { 
+      background-color: transparent;
+      padding: 0px 80px 40px 0px;
+      margin: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* align-items: baseline; */
+    }
+
+    .stayinfothing {
+      width: 300px;
+    }
+
+    .staydescriptionthing {
+     display: none;
+    }
+
+    .moreDetails {
+      padding: 10px 20px;
+      font-size: 30px;
+      cursor: pointer;
+      position: relative;
+      border: 2px solid white;
+      outline: none;
+      color: black;
+      margin: 0;
+      white-space: nowrap;
+      padding: 15px;
+      background-color: white;
+      font-family: 'Brown Bold', sans-serif;
+      line-height: 1.2em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  .hostelimage {
+    padding-top: 60px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .commentForm {
+    width: 350px; 
+}
+
+input[class="comment"] {
+  width: 300px;
+  height: 55px;
+}
+
+.formthingy {
+    width: 300px;
+    min-height: 200px;
+}
+
+input[class="formthings"] {
+  width: 200px;
+  height: 55px;
+}
+
+}
+
 
 
 

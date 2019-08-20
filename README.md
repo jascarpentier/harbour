@@ -27,9 +27,9 @@ A central repo for my final project.
 
 # Project Overview
 
-Harbour is a web application where  users can search for unique stays that are exclusively located by bodies of water. (oceans, lakes, rivers)
+Harbour is a web application where  users can see a list of the top Hostels of 2019 and leave a comment on them.
 
-Users can leave reviews and comments on the different stays. Users can also check-out their 'My Profil' section and add more details (that is not provided in the sign-up form) to their profile so that Hosts may get to know them better.
+Users can leave reviews and comments on the different stays. 
 
 ### Collaborators
 * [Jasmine Carpentier](https://github.com/jascarpentier)
@@ -51,15 +51,17 @@ Users can leave reviews and comments on the different stays. Users can also chec
 
 ### MVP 
 
-Users will be able to sign-up and log-in to the web application. Users will also be able to check-out their 'My Profile Page' and update or change information about themselves as well as delete their profile. 
+Users will be able to sign-up and log-in to the web application.  
 
 Users will be able to leave a review and/or comment on Stays.
+
 
 ### POST MVP
 
 - Implementing the Google Maps API
 - Adding a quiz that will match users to a suggested stay if they don't know where they want to go
 - Implementing Host vs. Stayer status on users so that people can posts stays
+- Adding the My Profile section and having full CRUD on users
 
 ## User Stories 
  * I'm a traveler that is tired of taking the 'tourist' route and want to find a unique place to stay during my travels. 
@@ -138,5 +140,8 @@ Then proceed to GitHub, submit a new Pull Request. Confirm comparison is:
   </div>
 </div>
 ```
+# issues-&-resolutions
+
+Being the first time using Auth on my own, it took me a longer time than expected. So I didn't have enough time to implement the My Profile section, which I would like to do after the final presentations. 
 
 

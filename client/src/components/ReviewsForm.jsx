@@ -2,10 +2,11 @@ import React from 'react'
 
 export const ReviewsForm = (props) => {
   return (
-    <form>
-      <h1 className='reviewh1'>Please leave your review here </h1>
+    <form className='commentForm'>
+      <h1 className='reviewh1'>Let us know what you think </h1>
       <div className='reviewSubmit'>
-        <input name="comment" type="text" placeholder="Type here ..." onChange={props.handleChange} />
+
+        <input className="comment" name='comment' type="text" placeholder='Type here ...' value={props.reviewFormData.comment} onChange={props.handleChange}></input>
         <input className='inputSubmitReview' type="submit" placeholder="Submit" onClick={props.handleSubmit} />
       </div>
     </form>
